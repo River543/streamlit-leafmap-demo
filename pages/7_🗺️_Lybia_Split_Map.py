@@ -18,10 +18,10 @@ st.title("Split-panel Map")
 with st.expander("See source code"):
     with st.echo():
         m = leafmap.Map()
-        before = "https://github.com/opengeos/datasets/releases/download/raster/Libya-2023-07-01.tif"
-        after = "https://github.com/opengeos/datasets/releases/download/raster/Libya-2023-09-13.tif"
+        before_map = "https://github.com/opengeos/datasets/releases/download/raster/Libya-2023-07-01.tif"
+        after_map = "https://github.com/opengeos/datasets/releases/download/raster/Libya-2023-09-13.tif"
         m.split_map(
-            left_layer=before, right_layer=after, left_label="Before", right_label="After"
+            left_layer=before_map, right_layer=after_map, left_label="Before", right_label="After"
         )
         # m.add_legend(title="ESA Land Cover", builtin_legend="ESA_WorldCover")
 
