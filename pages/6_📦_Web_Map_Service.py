@@ -1,6 +1,9 @@
 import ast
 import streamlit as st
 import leafmap.foliumap as leafmap
+# get_wms_layers 並不是 leafmap.foliumap 中的函數
+# 應改為從 leafmap.common 或 leafmap.leafmap 匯入
+from leafmap.common import get_wms_layers
 
 st.set_page_config(layout="wide")
 
@@ -17,9 +20,11 @@ st.sidebar.image(logo)
 
 @st.cache_data
 def get_layers(url):
-    options = leafmap.get_wms_layers(url)
+    # options = leafmap.get_wms_layers(url)
+    # get_wms_layers 並不是 leafmap.foliumap 中的函數
+    # 應改為從 leafmap.common 或 leafmap.leafmap 匯入
+    options = get_wms_layers(url)
     return options
-
 
 st.title("Web Map Service (WMS)")
 st.markdown(
