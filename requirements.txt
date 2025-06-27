@@ -3,3 +3,7 @@ geopandas
 leafmap
 owslib
 streamlit
+pydeck
+pandas
+numpy
+python-dotenv
